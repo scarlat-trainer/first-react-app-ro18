@@ -1,23 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import Title from './components/title/title';
+import Header from './components/header/header';
+import Article from './components/article/article';
 
 function App() {
+
+  const firstTitle = "First article"
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div id="App">
+      <Header/>
+      <main>
+      <Title/>
+      <Article title={firstTitle} content={"blablabla lorem ipsum blabla"}/>
+      <Article title={"Second article"} content={"second blablabla lorem ipsum blabla"}/>
+      <Article title={"Cristi chiar se pricepe la trainning"} content={"dar si clasa e buna"}/>
+      <Article />
+      <Article />
+      <Article />
+      </main>
     </div>
   );
 }
